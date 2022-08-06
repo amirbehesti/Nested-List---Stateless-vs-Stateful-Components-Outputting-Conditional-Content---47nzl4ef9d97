@@ -155,15 +155,21 @@ const states = [
 ];
 
 function App() {
-  return <div id="main">
-    <ul>
-      {states.map((item, index) => {
-        return (
-          <StateComponent id={`state${index + 1}`} key={`state${index + 1}`} state={item} />
-        )
-      })}
-    </ul>
-  </div>;
+  return (
+    <div id="main">
+      <ul>
+        {states.map((item, index) => {
+          return (
+            <StateComponent
+              id={`state${index + 1}`}
+              key={`state${index + 1}`}
+              state={item}
+            />
+          );
+        })}
+      </ul>
+    </div>
+  );
 }
 
 export default App;
